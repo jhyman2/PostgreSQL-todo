@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PostgreSQL Todo</title>
+	<style>
+		.complete {
+			text-decoration: line-through;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+	<% todos.forEach(function(todo) { %>
+		<li class="<%= todo.complete ? 'complete' : '' %>"><%= todo.name %></li>
+	<% }); %>
+	</ul>
+
+	<form action="/add" method="post">
+		Name to add: <input type="text" name="name">
+		<input type="submit" value="Submit">
+	</form>
+	<form action="/complete" method="post">
+		Name to complete: <input type="text" name="name">
+		<input type="submit" value="Submit">
+	</form>
+	<form action="/delete" method="post">
+		Name to delete: <input type="text" name="name">
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

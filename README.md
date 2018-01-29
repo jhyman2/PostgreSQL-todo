@@ -4,6 +4,6 @@
 
 ----
 ## Usage
-1. Run 'npm install' in your terminal.
+1. Run `npm install` in your terminal.
 2. Run `node index` in your terminal.
 3. Open `localhost:8080` in a browser.
